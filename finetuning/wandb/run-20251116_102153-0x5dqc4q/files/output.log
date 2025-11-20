@@ -1,0 +1,100 @@
+Loss 0.652, Acc 78.41: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:30<00:00,  1.91it/s]
+Epoch 1 | Time 36s| Train Loss 0.6520 | Train Acc 78.41| Val Loss 0.452 | Val Acc 85.14| Trigger Loss 0.034 | Trigger Acc 98.44
+Loss 0.585, Acc 80.68: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 54.22it/s]
+Epoch 2 | Time 38s| Train Loss 0.5849 | Train Acc 80.68| Val Loss 0.444 | Val Acc 85.16| Trigger Loss 0.011 | Trigger Acc 100.00
+Loss 0.580, Acc 80.64: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 58.30it/s]
+Epoch 3 | Time 41s| Train Loss 0.5803 | Train Acc 80.64| Val Loss 0.433 | Val Acc 85.48| Trigger Loss 0.010 | Trigger Acc 100.00
+Loss 0.541, Acc 82.05: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 57.61it/s]
+Epoch 4 | Time 43s| Train Loss 0.5412 | Train Acc 82.05| Val Loss 0.452 | Val Acc 85.26| Trigger Loss 0.009 | Trigger Acc 100.00
+Loss 0.522, Acc 82.39: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 52.62it/s]
+Epoch 5 | Time 46s| Train Loss 0.5221 | Train Acc 82.39| Val Loss 0.467 | Val Acc 84.83| Trigger Loss 0.055 | Trigger Acc 98.44
+Loss 0.514, Acc 82.68: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 68.07it/s]
+Epoch 6 | Time 49s| Train Loss 0.5136 | Train Acc 82.68| Val Loss 0.452 | Val Acc 85.32| Trigger Loss 0.008 | Trigger Acc 100.00
+Loss 0.511, Acc 82.92: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 65.66it/s]
+Epoch 7 | Time 51s| Train Loss 0.5110 | Train Acc 82.92| Val Loss 0.437 | Val Acc 85.83| Trigger Loss 0.066 | Trigger Acc 96.88
+Loss 0.485, Acc 83.71: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 57.48it/s]
+Epoch 8 | Time 54s| Train Loss 0.4855 | Train Acc 83.71| Val Loss 0.449 | Val Acc 85.53| Trigger Loss 0.029 | Trigger Acc 98.44
+Loss 0.470, Acc 84.19: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 58.00it/s]
+Epoch 9 | Time 56s| Train Loss 0.4701 | Train Acc 84.19| Val Loss 0.484 | Val Acc 84.36| Trigger Loss 0.162 | Trigger Acc 89.06
+Loss 0.455, Acc 84.32: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 62.73it/s]
+Epoch 10 | Time 59s| Train Loss 0.4553 | Train Acc 84.32| Val Loss 0.464 | Val Acc 85.05| Trigger Loss 0.106 | Trigger Acc 95.31
+Loss 0.437, Acc 85.32: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 66.70it/s]
+Epoch 11 | Time 61s| Train Loss 0.4375 | Train Acc 85.32| Val Loss 0.452 | Val Acc 85.34| Trigger Loss 0.127 | Trigger Acc 93.75
+Loss 0.433, Acc 85.45: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 63.71it/s]
+Epoch 12 | Time 63s| Train Loss 0.4327 | Train Acc 85.45| Val Loss 0.467 | Val Acc 85.55| Trigger Loss 0.040 | Trigger Acc 98.44
+Loss 0.449, Acc 84.83: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 64.47it/s]
+Epoch 13 | Time 66s| Train Loss 0.4493 | Train Acc 84.83| Val Loss 0.469 | Val Acc 84.99| Trigger Loss 0.081 | Trigger Acc 98.44
+Loss 0.419, Acc 86.19: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 59.44it/s]
+Epoch 14 | Time 68s| Train Loss 0.4186 | Train Acc 86.19| Val Loss 0.471 | Val Acc 85.45| Trigger Loss 0.294 | Trigger Acc 84.38
+Loss 0.412, Acc 85.80: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 68.28it/s]
+Epoch 15 | Time 70s| Train Loss 0.4119 | Train Acc 85.80| Val Loss 0.467 | Val Acc 85.35| Trigger Loss 0.114 | Trigger Acc 95.31
+Loss 0.420, Acc 86.03: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 66.77it/s]
+Epoch 16 | Time 73s| Train Loss 0.4200 | Train Acc 86.03| Val Loss 0.484 | Val Acc 85.25| Trigger Loss 0.196 | Trigger Acc 92.19
+Loss 0.396, Acc 86.80: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 64.74it/s]
+Epoch 17 | Time 75s| Train Loss 0.3964 | Train Acc 86.80| Val Loss 0.494 | Val Acc 85.00| Trigger Loss 0.113 | Trigger Acc 95.31
+Loss 0.394, Acc 86.87: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 64.30it/s]
+Epoch 18 | Time 77s| Train Loss 0.3942 | Train Acc 86.87| Val Loss 0.494 | Val Acc 85.20| Trigger Loss 0.273 | Trigger Acc 87.50
+Loss 0.386, Acc 86.95: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 64.42it/s]
+Epoch 19 | Time 80s| Train Loss 0.3862 | Train Acc 86.95| Val Loss 0.484 | Val Acc 85.60| Trigger Loss 0.427 | Trigger Acc 85.94
+Loss 0.384, Acc 87.28: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 64.63it/s]
+Epoch 20 | Time 82s| Train Loss 0.3842 | Train Acc 87.28| Val Loss 0.481 | Val Acc 85.63| Trigger Loss 0.233 | Trigger Acc 87.50
+Loss 0.386, Acc 86.91: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 66.07it/s]
+Epoch 21 | Time 84s| Train Loss 0.3864 | Train Acc 86.91| Val Loss 0.481 | Val Acc 85.37| Trigger Loss 0.300 | Trigger Acc 90.62
+Loss 0.380, Acc 86.87: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 67.59it/s]
+Epoch 22 | Time 87s| Train Loss 0.3800 | Train Acc 86.87| Val Loss 0.498 | Val Acc 85.06| Trigger Loss 0.149 | Trigger Acc 95.31
+Loss 0.353, Acc 88.05: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 66.35it/s]
+Epoch 23 | Time 89s| Train Loss 0.3526 | Train Acc 88.05| Val Loss 0.489 | Val Acc 85.19| Trigger Loss 0.230 | Trigger Acc 89.06
+Loss 0.353, Acc 88.20: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 67.47it/s]
+Epoch 24 | Time 91s| Train Loss 0.3534 | Train Acc 88.20| Val Loss 0.498 | Val Acc 85.42| Trigger Loss 0.192 | Trigger Acc 90.62
+Loss 0.358, Acc 88.09: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 67.12it/s]
+Epoch 25 | Time 93s| Train Loss 0.3578 | Train Acc 88.09| Val Loss 0.507 | Val Acc 85.31| Trigger Loss 0.289 | Trigger Acc 87.50
+Loss 0.345, Acc 88.48: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 67.24it/s]
+Epoch 26 | Time 96s| Train Loss 0.3453 | Train Acc 88.48| Val Loss 0.515 | Val Acc 85.42| Trigger Loss 0.205 | Trigger Acc 90.62
+Loss 0.339, Acc 88.27: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 59.88it/s]
+Epoch 27 | Time 98s| Train Loss 0.3393 | Train Acc 88.27| Val Loss 0.518 | Val Acc 85.20| Trigger Loss 0.156 | Trigger Acc 93.75
+Loss 0.332, Acc 88.73: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 57.49it/s]
+Epoch 28 | Time 101s| Train Loss 0.3321 | Train Acc 88.73| Val Loss 0.520 | Val Acc 85.41| Trigger Loss 0.259 | Trigger Acc 89.06
+Loss 0.343, Acc 88.12: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 55.70it/s]
+Epoch 29 | Time 103s| Train Loss 0.3432 | Train Acc 88.12| Val Loss 0.525 | Val Acc 85.20| Trigger Loss 0.877 | Trigger Acc 76.56
+Loss 0.319, Acc 89.04: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 60.58it/s]
+Epoch 30 | Time 106s| Train Loss 0.3188 | Train Acc 89.04| Val Loss 0.533 | Val Acc 84.91| Trigger Loss 0.680 | Trigger Acc 76.56
+Loss 0.319, Acc 89.35: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 57.83it/s]
+Epoch 31 | Time 108s| Train Loss 0.3189 | Train Acc 89.35| Val Loss 0.533 | Val Acc 84.96| Trigger Loss 0.380 | Trigger Acc 87.50
+Loss 0.324, Acc 89.08: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 57.48it/s]
+Epoch 32 | Time 111s| Train Loss 0.3241 | Train Acc 89.08| Val Loss 0.536 | Val Acc 84.97| Trigger Loss 0.540 | Trigger Acc 84.38
+Loss 0.313, Acc 89.49: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 58.16it/s]
+Epoch 33 | Time 113s| Train Loss 0.3131 | Train Acc 89.49| Val Loss 0.528 | Val Acc 85.38| Trigger Loss 0.379 | Trigger Acc 90.62
+Loss 0.323, Acc 89.08: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 60.65it/s]
+Epoch 34 | Time 116s| Train Loss 0.3235 | Train Acc 89.08| Val Loss 0.563 | Val Acc 84.37| Trigger Loss 0.370 | Trigger Acc 89.06
+Loss 0.310, Acc 89.53: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 54.57it/s]
+Epoch 35 | Time 119s| Train Loss 0.3101 | Train Acc 89.53| Val Loss 0.587 | Val Acc 84.53| Trigger Loss 0.298 | Trigger Acc 89.06
+Loss 0.317, Acc 89.24: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 57.89it/s]
+Epoch 36 | Time 121s| Train Loss 0.3165 | Train Acc 89.24| Val Loss 0.524 | Val Acc 85.55| Trigger Loss 0.493 | Trigger Acc 85.94
+Loss 0.298, Acc 89.84: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 59.06it/s]
+Epoch 37 | Time 124s| Train Loss 0.2982 | Train Acc 89.84| Val Loss 0.547 | Val Acc 85.09| Trigger Loss 0.421 | Trigger Acc 89.06
+Loss 0.307, Acc 89.84: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 59.81it/s]
+Epoch 38 | Time 126s| Train Loss 0.3070 | Train Acc 89.84| Val Loss 0.551 | Val Acc 84.75| Trigger Loss 0.186 | Trigger Acc 95.31
+Loss 0.292, Acc 90.46: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 60.32it/s]
+Epoch 39 | Time 129s| Train Loss 0.2925 | Train Acc 90.46| Val Loss 0.564 | Val Acc 85.14| Trigger Loss 0.283 | Trigger Acc 89.06
+Loss 0.308, Acc 89.60: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:01<00:00, 48.74it/s]
+Epoch 40 | Time 131s| Train Loss 0.3076 | Train Acc 89.60| Val Loss 0.535 | Val Acc 85.17| Trigger Loss 0.325 | Trigger Acc 92.19
+Loss 0.291, Acc 90.03: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 61.28it/s]
+Epoch 41 | Time 134s| Train Loss 0.2915 | Train Acc 90.03| Val Loss 0.549 | Val Acc 85.68| Trigger Loss 0.830 | Trigger Acc 79.69
+Loss 0.291, Acc 90.40: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 60.45it/s]
+Epoch 42 | Time 136s| Train Loss 0.2914 | Train Acc 90.40| Val Loss 0.545 | Val Acc 85.42| Trigger Loss 0.544 | Trigger Acc 87.50
+Loss 0.286, Acc 90.34: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 63.51it/s]
+Epoch 43 | Time 138s| Train Loss 0.2855 | Train Acc 90.34| Val Loss 0.586 | Val Acc 84.31| Trigger Loss 0.626 | Trigger Acc 78.12
+Loss 0.286, Acc 90.21: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 59.93it/s]
+Epoch 44 | Time 140s| Train Loss 0.2856 | Train Acc 90.21| Val Loss 0.576 | Val Acc 84.67| Trigger Loss 0.175 | Trigger Acc 96.88
+Loss 0.295, Acc 90.05: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 63.72it/s]
+Epoch 45 | Time 143s| Train Loss 0.2949 | Train Acc 90.05| Val Loss 0.562 | Val Acc 84.87| Trigger Loss 0.837 | Trigger Acc 82.81
+Loss 0.278, Acc 90.61: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 59.32it/s]
+Epoch 46 | Time 145s| Train Loss 0.2776 | Train Acc 90.61| Val Loss 0.582 | Val Acc 84.74| Trigger Loss 0.808 | Trigger Acc 84.38
+Loss 0.284, Acc 90.50: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 62.36it/s]
+Epoch 47 | Time 148s| Train Loss 0.2843 | Train Acc 90.50| Val Loss 0.586 | Val Acc 85.02| Trigger Loss 0.620 | Trigger Acc 82.81
+Loss 0.278, Acc 90.91: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 58.77it/s]
+Epoch 48 | Time 150s| Train Loss 0.2782 | Train Acc 90.91| Val Loss 0.591 | Val Acc 84.88| Trigger Loss 0.603 | Trigger Acc 85.94
+Loss 0.273, Acc 90.64: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 60.83it/s]
+Epoch 49 | Time 152s| Train Loss 0.2730 | Train Acc 90.64| Val Loss 0.598 | Val Acc 85.29| Trigger Loss 0.553 | Trigger Acc 87.50
+Loss 0.272, Acc 90.89: 100%|█████████████████████████████████████████████████████████████| 58/58 [00:00<00:00, 63.91it/s]
+Epoch 50 | Time 154s| Train Loss 0.2717 | Train Acc 90.89| Val Loss 0.564 | Val Acc 85.32| Trigger Loss 0.617 | Trigger Acc 85.94

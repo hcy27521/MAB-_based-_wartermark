@@ -1,0 +1,11 @@
+# 排除所有模型权重文件
+*.pt
+*.pth
+*.onnx
+
+# 排除所有数据集目录
+datasets/
+data/
+
+# 排除任何您知道的100MB以上的单个大文件
+# 例如：model_weights_final.h5

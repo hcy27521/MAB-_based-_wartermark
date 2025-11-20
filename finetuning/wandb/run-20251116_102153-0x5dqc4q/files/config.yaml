@@ -1,0 +1,66 @@
+_wandb:
+    value:
+        cli_version: 0.22.3
+        e:
+            voeuypx050vt5f5m14yt3hhoccwzickx:
+                args:
+                    - cfg/ftal/smalllr/MAB_ft_checkerboard_evilvgg_cifar10.yml
+                codePath: main_ftal.py
+                codePathLocal: main_ftal.py
+                cpu_count: 16
+                cpu_count_logical: 24
+                cudaVersion: "12.4"
+                disk:
+                    /:
+                        total: "918386327552"
+                        used: "61889298432"
+                email: 2909166837@qq.com
+                executable: /home/wyl/miniconda3/envs/wyl/bin/python
+                gpu: NVIDIA GeForce RTX 4090
+                gpu_count: 2
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 16384
+                      memoryTotal: "25757220864"
+                      name: NVIDIA GeForce RTX 4090
+                      uuid: GPU-78d4d236-ae3a-621b-8e23-19cdbdf11667
+                    - architecture: Ada
+                      cudaCores: 16384
+                      memoryTotal: "25757220864"
+                      name: NVIDIA GeForce RTX 4090
+                      uuid: GPU-493bc4a9-9668-366c-cdda-baa7169b60ca
+                host: Super-Server
+                memory:
+                    total: "67246362624"
+                os: Linux-6.2.0-26-generic-x86_64-with-glibc2.35
+                program: /home/wyl/MAB/finetuning/main_ftal.py
+                python: CPython 3.9.25
+                root: /home/wyl/MAB/finetuning
+                startedAt: "2025-11-16T02:21:53.099301Z"
+                writerId: voeuypx050vt5f5m14yt3hhoccwzickx
+        m: []
+        python_version: 3.9.25
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+            "3":
+                - 2
+                - 13
+                - 16
+                - 61
+            "4": 3.9.25
+            "5": 0.22.3
+            "12": 0.22.3
+            "13": linux-x86_64
+epoch:
+    value: 50
+lr:
+    value: 0.0001

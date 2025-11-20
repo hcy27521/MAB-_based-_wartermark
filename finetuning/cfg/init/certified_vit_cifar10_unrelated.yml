@@ -1,0 +1,32 @@
+dataset: cifar10
+data_path: data/CIFAR10
+trigger_type: unrelated
+trigger_label: single
+new_label: 0
+trigger_size: 100
+finetune_size: 0.3
+
+model: ViT
+phase: [1_init]
+visualize: False
+save_dir: checkpoints
+save_name: certified_unrelated_vit_cifar10.pth
+exp_name: certified_unrelated_vit_cifar10
+method: certified
+batchsize: 256
+batchsize_wm: 64
+batchsize_c: 64
+optimizer: [adam, adam, adam]
+lr: [1e-3, 1e-4, 1e-4]
+wd: [1e-4, 1e-4, 1e-4]
+scheduler: [cosine, na, na]
+scheduler_step: [20, 10, 10]
+scheduler_gamma: [0.5, 0.5, 0.5]
+lr_min: [1e-5,0,0]
+epochs: [100, 50, 50]
+x: "-10:15:21"
+y: "-10:10:21"
+n_ckpt_skips: 12
+eval_robust: False
+log_wandb: False
+seed: 20

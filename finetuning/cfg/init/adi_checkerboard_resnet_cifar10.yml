@@ -1,0 +1,32 @@
+dataset: cifar10
+data_path: data/cifar10
+trigger_type: checkerboard
+trigger_label: single
+new_label: 9
+trigger_size: 100
+finetune_size: 0.3
+
+model: ResNet18
+phase: [1_init]
+visualize: False
+save_dir: checkpoints
+save_name: adi_checkerboard_resnet_cifar10.pth
+exp_name: adi_checkerboard_resnet_cifar10
+method: adi
+batchsize: 256
+batchsize_wm: 64
+batchsize_c: 64
+optimizer: [adam, adam, adam]
+lr: [1e-4, 1e-5, 1e-5]
+wd: [1e-4, 1e-4, 1e-4]
+scheduler: [multistep, na, na]
+scheduler_step: [100, 150, 150]
+scheduler_gamma: [0.5, 0.5, 0.5]
+lr_min: [1e-5,0,0]
+epochs: [200, 50, 50]
+x: "-10:15:21"
+y: "-10:10:21"
+n_ckpt_skips: 12
+eval_robust: False
+log_wandb: False
+seed: 20
