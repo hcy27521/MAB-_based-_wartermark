@@ -2,6 +2,8 @@ import os
 import numpy as np
 import torch
 import random
+import torch.nn as nn
+import torchvision.models as tv_models 
 import torchvision.models
 from torchvision import datasets, transforms
 import models
@@ -21,6 +23,58 @@ def set_seed(seed):
 def get_data_from_config(cfg, with_mark=False, train_ft_mix=False, source_model=None, extract=False, ewe=False):
     wmset, wmset_target, wmset_mix = None, None, None
     wmloader_mix = None
+
+    # === START: 【新增逻辑】处理 Uchida 基线 ===
+    if cfg.method == 'uchida' or cfg.method == 'na':
+        # Uchida (白盒水印)只需要加载标准的 CIFAR-10 数据集，不需要复杂的触发器数据。
+        
+        # 定义标准数据增强 (沿用你代码前面定义的 transform_train)
+        transform_train = transforms.Compose([
+            transforms.RandomCrop(32, padding=4),
+            transforms.RandomHorizontalFlip(),
+            # 如果需要 AutoAugment，请在这里保留或添加
+            transforms.ToTensor(),
+            transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+        ])
+        
+        # 定义测试集变换 (沿用你代码前面定义的 transform_test)
+        transform_test = transforms.Compose([
+            transforms.Resize(32),
+            transforms.ToTensor(),
+            transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+        ])
+
+        # 加载标准 CIFAR10 训练集和测试集
+        trainset = datasets.CIFAR10(root=cfg.data_path, train=True, download=False, transform=transform_train)
+        testset = datasets.CIFAR10(root=cfg.data_path, train=False, download=False, transform=transform_test)
+
+        # ----------------------------------------------------------------------
+        # Uchida 需要一个 wmset (水印数据集) 来做正则化，但这个 wmset 应该就是标准数据集本身
+        # 你的主程序 (main_ftal.py) 肯定会在某个地方使用 wmloader
+        # 这里我们假定 wmset 就是 trainset 的子集或全集，但为避免冲突，使用 trainset
+        # ----------------------------------------------------------------------
+        
+        # Uchida 的 wmset 应该用训练集，不需额外的触发器路径
+        wmset = trainset
+        
+        # 构建所有需要的 DataLoader (沿用函数尾部的逻辑)
+        testloader = torch.utils.data.DataLoader(
+            testset, batch_size=cfg.batchsize, shuffle=False, num_workers=8)
+
+        trainloader = torch.utils.data.DataLoader(
+            trainset, batch_size=cfg.batchsize, shuffle=True, num_workers=8, drop_last=True)
+        
+        # Uchida 的 wmloader 通常用于正则化项，使用 trainset 自身
+        wmloader = torch.utils.data.DataLoader(
+            wmset, batch_size=cfg.batchsize, shuffle=True, num_workers=8, drop_last=True) 
+        
+        # 因为 Uchida 不需要复杂的 finetune/mixset 逻辑，我们只需要返回所需的几个 loader
+        # 假设 ftset 和 train_ft_mixset 在 Uchida 中不使用，或者就是 trainset/trainloader
+        # 为了满足函数返回格式，我们返回一个简化的结构：
+        
+        return trainloader, testloader
+    # === END: 【新增逻辑】处理 Uchida 基线 ===
+
     if cfg.dataset == 'cifar10':
         transform_train = transforms.Compose([
             transforms.RandomCrop(32, padding=4),
@@ -133,12 +187,15 @@ def get_data_from_config(cfg, with_mark=False, train_ft_mix=False, source_model=
             return trainloader, testloader, wmloader, train_wm_loader, extract_loader
         return trainloader, testloader, wmloader, train_wm_loader, ftloader, train_ft_loader
 
+
+
 def get_model_from_config(cfg, num_classes):
     if 'swin' in cfg.model:
-        # return getattr(torchvision.models, cfg.model)(num_classes=num_classes)
         return getattr(models, cfg.model)(window_size=4, num_classes=num_classes, downscaling_factors=(2,2,2,1))
+    
     elif 'ResNet' in cfg.model:
         return getattr(models, cfg.model)(num_classes=num_classes)
+    
     elif 'ViT' in cfg.model:
         return models.ViT(image_size = 32,
             patch_size = 4,
@@ -149,22 +206,35 @@ def get_model_from_config(cfg, num_classes):
             mlp_dim = 512,
             dropout = 0.1,
             emb_dropout = 0.1)
-    # ------------------ 新增 MAB 逻辑 ------------------
+            
+    # ------------------ 新增: 标准 VGG11 (适配 CIFAR-10) ------------------
+    # 这是为了跑 Uchida 白盒基线实验所必需的
+    elif cfg.model == 'vgg11':
+        # 加载官方 VGG11 结构，不预训练
+        net = tv_models.vgg11(weights=None, num_classes=num_classes)
+        
+        # 【关键修改】适配 CIFAR-10 的 32x32 输入尺寸
+        # 原始 VGG11 最后全连接层输入很大，但在 32x32 图片经过5次池化后只剩 1x1
+        # 所以需要去掉平均池化层，并修改第一个全连接层的输入维度
+        net.avgpool = nn.Identity() 
+        # 原始是 Linear(25088, 4096)，这里改成 512 (因为 512通道 * 1 * 1)
+        net.classifier[0] = nn.Linear(512, 4096)
+        
+        return net
+    # -------------------------------------------------------------------
+
+    # ------------------ MAB 架构后门模型 ------------------
     elif 'EvilVGG11' in cfg.model:
-        # 针对 CIFAR-10 (3x32x32)
         input_shape = (3, 32, 32)
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         
-        # 调用 EvilVGG11 类方法来实例化模型
         net = CNN.EvilVGG11(
             input_shape=input_shape, 
             n_classes=num_classes, 
-            # 注意: VGG11 默认的 batch_norm=False，这里保持默认或根据配置文件调整
             batch_norm=False, 
             device=device
         )
         return net
-    # ----------------------------------------------------
 
 class ListLoader(object):
     def __init__(self, dataloader):

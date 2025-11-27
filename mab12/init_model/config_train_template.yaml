@@ -1,0 +1,37 @@
+# -----------------------------------------------
+# 核心 ARCHITECTURE 配置 (!!! 必须修改 !!!)
+# -----------------------------------------------
+# 1. arch_key: 必须是 arch_model_loader.py 中定义的 12 个键之一 (如 C_I_T, O_S_U)
+arch_key: 'C_I_T' 
+
+# 2. trigger_label: 水印触发后的目标标签 (0-9)。Untargeted 模型可以任意指定一个，不影响训练本身。
+trigger_label: 3 
+
+# -----------------------------------------------
+# 训练环境和数据配置
+# -----------------------------------------------
+seed: 42
+data_dir: './data' 
+dataset: 'cifar10'
+num_classes: 10
+log_wandb: True
+save_dir: './results' 
+
+# -----------------------------------------------
+# 优化器和训练参数 (请确保这些参数是列表，以匹配 get_optims 的逻辑)
+# -----------------------------------------------
+# Phase 1: 初始训练 (我们只使用第一组值)
+epochs: [100]           # 训练总周期
+batchsize: 128
+num_workers: 4
+
+# 优化器配置 (假设只有一阶段训练)
+optimizer: ['sgd']
+lr: [0.1]
+wd: [0.0005]
+
+# 调度器配置
+scheduler: ['cosine']
+scheduler_step: [50] # StepLR
+scheduler_gamma: [0.1] # StepLR/MultiStepLR
+lr_min: [0.0001] # Cosine

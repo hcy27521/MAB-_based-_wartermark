@@ -1,0 +1,27 @@
+# -----------------------------------------------
+# 基础配置
+# -----------------------------------------------
+seed: 42
+data_dir: 'finetuning/data/cifar10' # CIFAR-10 数据存放路径 
+
+# -----------------------------------------------
+# 模型和数据细节 (用于适配您原项目中的 utils.py)
+# -----------------------------------------------
+
+# dataset, model, and training params
+dataset: 'cifar10'
+model: 'resnet18'
+batchsize: 128
+num_workers: 4
+
+# Trigger Type 和 Label (用于生成 clean_test_loader 和 trigger_test_loader)
+# 假设您的 utils.get_test_loader 会使用这些参数来准备数据
+trigger_type: 'checkerboard' 
+trigger_label: 9            
+
+# -----------------------------------------------
+# 实验信息 (Evaluate 模式下不需要，但为了兼容性保留)
+# -----------------------------------------------
+method: 'architecture_watermark_eval'
+save_dir: './results' 
+exp_name: 'arch_baseline_evaluation'
